@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Atlas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Café Atlas</h1>
+    <p>Le meilleur café à Fès</p>
+</header>
+
+<section class="intro">
+    <h2>Bienvenue au Café Atlas</h2>
+    <p>
+        Découvrez notre café chaleureux au cœur de Fès,
+        avec des boissons délicieuses et une ambiance agréable.
+    </p>
+</section>
+
+<section class="menu">
+    <h2>Notre Menu</h2>
+
+    <div class="menu-item">
+        <div>
+            <h3>Café Noir</h3>
+            <p>Café classique</p>
+        </div>
+        <strong>10 DH</strong>
+        <button>Commander</button>
+    </div>
+
+    <div class="menu-item">
+        <div>
+            <h3>Café au Lait</h3>
+            <p>Café avec du lait</p>
+        </div>
+        <strong>15 DH</strong>
+        <button>Commander</button>
+    </div>
+
+    <div class="menu-item">
+        <div>
+            <h3>Cappuccino</h3>
+            <p>Café crémeux avec mousse de lait</p>
+        </div>
+        <strong>18 DH</strong>
+        <button>Commander</button>
+    </div>
+
+    <div class="menu-item">
+        <div>
+            <h3>Thé à la Menthe</h3>
+            <p>Thé marocain traditionnel</p>
+        </div>
+        <strong>12 DH</strong>
+        <button>Commander</button>
+    </div>
+
+    <div class="menu-item">
+        <div>
+            <h3>Jus d'Orange</h3>
+            <p>Jus d'orange frais</p>
+        </div>
+        <strong>15 DH</strong>
+        <button>Commander</button>
+    </div>
+
+</section>
+<div id="order-form" style="display: none;">
+    <h2>Passer une commande</h2>
+
+    <p id="selected-item"></p>
+
+    <input type="text" id="customer-name" placeholder="Votre nom">
+<input type="tel" id="customer-phone" placeholder="Votre téléphone">
+   <input type="number" id="quantity" min="1" value="1" placeholder="Quantité">
+    <button id="confirm-order">Confirmer la commande</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
