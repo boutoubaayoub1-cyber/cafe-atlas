@@ -15,7 +15,9 @@
 </header>
 
 <section class="intro">
-    <h2>Bienvenue au Café Atlas</h2>
+    <h2 style="font-family: Georgia, 'Times New Roman', serif; font-size: 42px; font-weight: 600; letter-spacing: 2px; font-style: italic; color: #4b2e1f; margin-bottom: 20px;">
+    Bienvenue au Café Atlas
+</h2>
     <p>
         Découvrez notre café chaleureux au cœur de Fès,
         avec des boissons délicieuses et une ambiance agréable.
@@ -23,62 +25,471 @@
 </section>
 
 <section class="menu">
-   <h2>Notre Menu</h2>
 
-<div class="menu-grid">
+    <!-- PAGE DES CATÉGORIES -->
+    <div id="categories-page">
 
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1613158556069-e7d8eae76214?auto=format&fit=crop&w=800&q=80" alt="Café Noir">
-        <h3>Café Noir</h3>
-        <p>Café classique</p>
-        <strong>10 DH</strong>
-        <button>Commander</button>
+        <h2>Notre Menu</h2>
+
+        <div class="categories-grid">
+
+            <div class="category-card" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Boissons chaudes">
+                <div class="category-overlay">
+                    <h3>☕ Boissons chaudes</h3>
+                    <p>Découvrir</p>
+                </div>
+            </div>
+
+            <div class="category-card" data-category="froid">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80" alt="Boissons froides">
+                <div class="category-overlay">
+                    <h3>🥤 Boissons froides</h3>
+                    <p>Découvrir</p>
+                </div>
+            </div>
+
+            <div class="category-card" data-category="plats">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Plats">
+                <div class="category-overlay">
+                    <h3>🍽️ Plats</h3>
+                    <p>Découvrir</p>
+                </div>
+            </div>
+
+            <div class="category-card" data-category="desserts">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Desserts">
+                <div class="category-overlay">
+                    <h3>🍰 Desserts</h3>
+                    <p>Découvrir</p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Thé à la Menthe"
-        <h3>Café au Lait</h3>
-        <p>Café avec du lait</p>
-        <strong>15 DH</strong>
-        <button>Commander</button>
+
+    <!-- PAGE DES PRODUITS -->
+    <div id="products-page" style="display: none;">
+
+        <button id="back-button" class="back-button">
+            ← Retour aux catégories
+        </button>
+
+        <h2 id="category-title">Menu</h2>
+
+        <div class="menu-grid">
+
+            <!-- ==================== BOISSONS CHAUDES ==================== -->
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1613158556069-e7d8eae76214?auto=format&fit=crop&w=800&q=80" alt="Café Noir">
+                <h3>Café Noir</h3>
+                <p>Café classique</p>
+                <strong>12 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Café au Lait">
+                <h3>Café au Lait</h3>
+                <p>Café avec du lait</p>
+                <strong>15 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Café crémeux avec mousse de lait</p>
+                <strong>18 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=80" alt="Thé à la Menthe">
+                <h3>Thé à la Menthe</h3>
+                <p>Thé marocain traditionnel</p>
+                <strong>12 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/069/470/553/small/a-cup-of-tea-on-a-black-plate-photo.jpg" alt="Thé Noir">
+                <p>Thé noir classique</p>
+                <strong>12 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://thumbs.dreamstime.com/b/lemon-tea-light-table-under-sun-408432919.jpg" alt="Thé Citron">
+                <h3>Thé Citron</h3>
+                <p>Thé parfumé au citron</p>
+                <strong>14 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Infusion">
+                <h3>Infusion</h3>
+                <p>Infusion chaude et parfumée</p>
+                <strong>15 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=800&q=80" alt="Lait Chaud">
+                <h3>Lait Chaud</h3>
+                <p>Lait chaud et doux</p>
+                <strong>12 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=800&q=80" alt="Chocolat Chaud">
+                <h3>Chocolat Chaud</h3>
+                <p>Chocolat chaud onctueux</p>
+                <strong>20 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/068/903/234/small/rich-aromatic-espresso-served-in-a-traditional-white-cup-with-a-silver-spoon-perfect-for-coffee-lovers-seeking-a-bold-experience-photo.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Espresso intense et aromatique</p>
+                <strong>12 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="chaud">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Café Latte">
+                <h3>Café Latte</h3>
+                <p>Café doux avec lait chaud</p>
+                <strong>20 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+
+            <!-- ==================== BOISSONS FROIDES ==================== -->
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80" alt="Jus d'Orange">
+                <h3>Jus d'Orange</h3>
+                <p>Jus d'orange frais</p>
+                <strong>18 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=80" alt="Jus de Fraise">
+                <h3>Jus de Fraise</h3>
+                <p>Jus frais à la fraise</p>
+                <strong>20 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+               <img src="https://img.magnific.com/photos-premium/verre-jus-citron-vert-avocat-table_1293074-12339.jpg?semt=ais_test_b&w=740&q=80" alt="Jus de citron">
+                <h3>Jus d'Avocat</h3>
+                <p>Jus d'avocat frais et crémeux</p>
+                <strong>22 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+               <img src="https://us.123rf.com/450wm/naturetron/naturetron2502/naturetron250211550/242166402-a-glass-of-vibrant-mango-smoothie-sits-beside-a-sliced-mango-tropical-refreshing-and-healthy.jpg?ver=6" alt="Mango Smoothie">
+                <h3>Jus de Mangue</h3>
+                <p>Jus de mangue frais</p>
+                <strong>22 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://t4.ftcdn.net/jpg/05/93/60/87/360_F_593608788_3F6Xlp4KSib8z24nzGcMVlkmPjBWRc2q.jpg" alt="Produit">
+                <h3>Jus d'Ananas</h3>
+                <p>Jus d'ananas frais</p>
+                <strong>20 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://img.magnific.com/photos-premium/smoothie-banane-framboise-dans-cuisson-au-melangeur_1174497-74867.jpg?semt=ais_hybrid&w=740&q=80" alt="Banana Raspberry Smoothie">
+                <h3>Jus de Banane</h3>
+                <p>Jus de banane onctueux</p>
+                <strong>18 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://static.vecteezy.com/ti/photos-gratuite/t2/43529361-frais-sucre-naturel-pomme-jus-photo.jpg" alt="Apple Juice">
+                <h3>Jus de Pomme</h3>
+                <p>Jus de pomme frais</p>
+                <strong>18 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=800&q=80" alt="Cocktail de Fruits">
+                <h3>Cocktail de Fruits</h3>
+                <p>Mélange frais de plusieurs fruits</p>
+                <strong>24 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://img.freepik.com/photos-premium/jus-agrumes-jus-citron-dans-verre-fruits-frais-table-bois-marron_262193-875.jpg?semt=ais_hybrid&w=740&q=80" alt="Jus d'agrumes">
+                <h3>Citron</h3>
+                <p>Boisson fraîche au citron</p>
+                <strong>15 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+
+            <!-- ==================== MOJITOS ==================== -->
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://thumbs.dreamstime.com/b/classic-mojito-cocktail-lime-mint-black-slate-background-388102649.jpg" alt="Mojito">
+                <h3>Mojito Classique</h3>
+                <p>Citron vert, menthe et eau gazeuse</p>
+                <strong>20 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://tresdou.com/wp-content/uploads/2025/07/Mojito-fraise-recette.jpg" alt="Mojito Fraise">
+                <h3>Mojito Fraise</h3>
+                <p>Fraise fraîche, menthe et citron</p>
+                <strong>23 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://senseandedibility.com/wp-content/uploads/2021/03/Passion-Fruit-Mojito-10.jpg" alt="Passion Fruit Mojito">
+                <h3>Mojito Passion</h3>
+                <p>Fruit de la passion, menthe et citron</p>
+                <strong>23 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://www.aperitissimo.fr/wp-content/uploads/2023/05/mojito-mangue.png" alt="Mojito Mangue">
+                <h3>Mojito Mangue</h3>
+                <p>Mangue fraîche, menthe et citron</p>
+                <strong>23 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://teranga-restaurant.fr/wp-content/uploads/2024/04/7-1.png" alt="Produit">
+                <h3>Mojito Fruits Rouges</h3>
+                <p>Fruits rouges, menthe et citron</p>
+                <strong>25 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="froid">
+                <img src="https://i.pinimg.com/originals/21/e8/fa/21e8fa254c60508f22d29a01991c0fb1.jpg" alt="Produit">
+                <h3>Mojito Blue</h3>
+                <p>Mojito frais et fruité</p>
+                <strong>23 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+
+            <!-- ==================== PLATS ==================== -->
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Plat du Jour">
+                <h3>Plat du Jour</h3>
+                <p>Délicieux plat préparé avec soin</p>
+                <strong>35 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://media.gettyimages.com/id/157585216/fr/photo/burger-de-poulet-croustillants-avec-une-salade-en-garniture.jpg?s=612x612&w=0&k=20&c=hivU4wfDdvXoOn6HKy-AdVvLLxPcpjO5FSOlqG4Mo-A=" alt="Burger Poulet Croustillant">
+                <h3>Burger Poulet</h3>
+                <p>Burger au poulet avec frites</p>
+                <strong>38 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Pizza garnie et préparée à la commande</p>
+                <strong>45 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://www.amourdecuisine.fr/wp-content/uploads/2018/03/tacos-au-poulet-a-la-sauce-algerienne-2-1.jpg" alt="Tacos Poulet">
+                <h3>Tacos Poulet</h3>
+                <p>Tacos généreux au poulet</p>
+                <strong>35 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://media.istockphoto.com/id/1165928230/fr/photo/grand-sandwich-avec-le-poulet-et-les-l%C3%A9gumes-sur-le-plat.jpg?s=612x612&w=0&k=20&c=AhNSR3RizTzalJ2uUUUmFWfuFLYO_mFvHnwNnZpKRwY=" alt="Sandwich Poulet">
+                <h3>Sandwich Poulet</h3>
+                <p>Sandwich au poulet et légumes frais</p>
+                <strong>30 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://t3.ftcdn.net/jpg/03/31/97/12/360_F_331971297_a2OcoeyBd60z9chPmBAc7CppmjnNSxms.jpg" alt="Plat">
+                <h3>Panini Poulet</h3>
+                <p>Panini chaud au poulet</p>
+                <strong>32 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://media.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/pasta-alla-cacciatore-mit-poulet-d33dc4e0.jpg" alt="Pasta Poulet">
+                <h3>Pasta Poulet</h3>
+                <p>Pâtes crémeuses au poulet</p>
+                <strong>40 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://media.istockphoto.com/id/184968231/fr/photo/salade-au-poulet.jpg?s=612x612&w=0&k=20&c=tUuU8nx6H8JabNyfn_mleOnRvAp3LWRXi9HFdADkysA=" alt="Salade au Poulet">
+                <h3>Salade Poulet</h3>
+                <p>Salade fraîche avec poulet grillé</p>
+                <strong>35 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="plats">
+                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80" alt="Frites">
+                <h3>Frites</h3>
+                <p>Frites croustillantes</p>
+                <strong>12 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+
+            <!-- ==================== DESSERTS ==================== -->
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Cheesecake crémeux et gourmand</p>
+                <strong>30 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Tiramisu doux au café</p>
+                <strong>30 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://media.istockphoto.com/id/1210773494/photo/chocolate-pancake-with-bananas.jpg?s=612x612&w=0&k=20&c=dIj_EfOxKKOnWYU4GdfvKGgePRiKB__YZPHHfsRfPb4=" alt="Pancakes au Chocolat et Banane">
+                <h3>Crêpe</h3>
+                <p>Crêpe gourmande avec garniture</p>
+                <strong>25 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://img.freepik.com/photos-gratuite/plaque-gaufres-gourmet-du-chocolat-tranches-banane_181624-58354.jpg?semt=ais_hybrid&w=740&q=80" alt="Gaufres au Chocolat et Banane">
+                <h3>Gaufre</h3>
+                <p>Gaufre croustillante et gourmande</p>
+                <strong>25 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://img.magnific.com/premium-photo/indulgent-homemade-dark-chocolate-fudge-brownie-stack_960396-386559.jpg?semt=ais_hybrid&w=740&q=80" alt="Brownie au Chocolat">
+                <h3>Brownie</h3>
+                <p>Brownie fondant au chocolat</p>
+                <strong>28 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://img-3.journaldesfemmes.fr/H0qYPxS9uCGiAxcOYPriAyleulw=/750x500/3e880207483541898952bc7c3491b00b/ccmcms-jdf/39903996.jpg" alt="Dessert">
+                <h3>Fondant au Chocolat</h3>
+                <p>Gâteau au chocolat au cœur fondant</p>
+                <strong>30 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://www.acouplecooks.com/wp-content/uploads/2024/12/Chocolate-Pancakes-008.jpg" alt="Chocolate Pancakes">
+                <h3>Pancake</h3>
+                <p>Pancakes moelleux et gourmands</p>
+                <strong>25 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="https://thefavoured.dk/cdn/shop/products/glace6-793065.jpg?v=1696504355&width=1445" alt="Glace">
+                <h3>Glace</h3>
+                <p>Glace fraîche et gourmande</p>
+                <strong>18 DH</strong>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Café Noir">
-        <h3>Cappuccino</h3>
-        <p>Café crémeux avec mousse de lait</p>
-        <strong>18 DH</strong>
-        <button>Commander</button>
-    </div>
-
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=80" alt="Thé à la Menthe">
-        <h3>Thé à la Menthe</h3>
-        <p>Thé marocain traditionnel</p>
-        <strong>12 DH</strong>
-        <button>Commander</button>
-    </div>
-
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423" alt="Jus d'Orange">
-        <h3>Jus d'Orange</h3>
-        <p>Jus d'orange frais</p>
-        <strong>15 DH</strong>
-        <button>Commander</button>
-    </div>
-
-</div>
 </section>
+
+
+<!-- PANIER -->
+
+<section id="cart" class="cart" style="display: none;">
+
+    <h2>🛒 Votre commande</h2>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        Total : <strong><span id="cart-total">0</span> DH</strong>
+    </div>
+
+    <button id="order-button">
+        Commander sur WhatsApp
+    </button>
+
+</section>
+
+
+<!-- FORMULAIRE -->
+
 <div id="order-form" style="display: none;">
-    <h2>Passer une commande</h2>
 
-    <p id="selected-item"></p>
+    <h2>Finaliser la commande</h2>
 
-    <input type="text" id="customer-name" placeholder="Votre nom">
-<input type="tel" id="customer-phone" placeholder="Votre téléphone">
-   <input type="number" id="quantity" min="1" value="1" placeholder="Quantité">
-    <button id="confirm-order">Confirmer la commande</button>
+    <input
+        type="text"
+        id="customer-name"
+        placeholder="Votre nom"
+    >
+
+    <input
+        type="tel"
+        id="customer-phone"
+        placeholder="Votre téléphone"
+    >
+
+    <button id="confirm-order">
+        Confirmer et envoyer sur WhatsApp
+    </button>
+
 </div>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
